@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Students - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ADMIN NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                StudentVote
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="admin-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-election.html">
+                        Elections
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-positions.html">
+                        Positions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-candidates.html">
+                        Candidates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-students.html">
+                        Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-results.html">
+                        Results
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-dashboard">
+
+
+        <!-- Page Heading -->
+
+        <section class="admin-welcome">
+
+            <h1>
+                Manage Students
+            </h1>
+
+            <p>
+                View and manage students registered
+                on the voting platform.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             STUDENT STATISTICS
+        ========================== -->
+
+        <section class="admin-stats">
+
+
+            <div class="admin-stat-card">
+
+                <span class="admin-stat-label">
+                    Total Students
+                </span>
+
+                <strong class="admin-stat-number">
+                    1,250
+                </strong>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span class="admin-stat-label">
+                    Active Students
+                </span>
+
+                <strong class="admin-stat-number">
+                    1,200
+                </strong>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span class="admin-stat-label">
+                    Inactive Students
+                </span>
+
+                <strong class="admin-stat-number">
+                    50
+                </strong>
+
+            </div>
+
+
+            <div class="admin-stat-card">
+
+                <span class="admin-stat-label">
+                    Students Who Voted
+                </span>
+
+                <strong class="admin-stat-number">
+                    842
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH AND FILTER
+        ========================== -->
+
+        <section class="student-filter-container">
+
+
+            <div class="student-search">
+
+                <label for="studentSearch">
+                    Search Students
+                </label>
+
+                <input
+                    type="search"
+                    id="studentSearch"
+                    placeholder="Search by name or student ID..."
+                >
+
+            </div>
+
+
+            <div class="student-filter">
+
+                <label for="studentStatusFilter">
+                    Status
+                </label>
+
+                <select id="studentStatusFilter">
+
+                    <option value="all">
+                        All Students
+                    </option>
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="student-filter">
+
+                <label for="votingStatusFilter">
+                    Voting Status
+                </label>
+
+                <select id="votingStatusFilter">
+
+                    <option value="all">
+                        All
+                    </option>
+
+                    <option value="voted">
+                        Voted
+                    </option>
+
+                    <option value="not-voted">
+                        Not Voted
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             STUDENT TABLE
+        ========================== -->
+
+        <section class="admin-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Registered Students
+                </h2>
+
+                <span id="studentCount">
+                    Showing 5 students
+                </span>
+
+            </div>
+
+
+            <div class="student-table-container">
+
+                <table class="student-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Student ID
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Programme
+                            </th>
+
+                            <th>
+                                Year
+                            </th>
+
+                            <th>
+                                Account
+                            </th>
+
+                            <th>
+                                Voting
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentTableBody">
+
+
+                        <!-- Student 1 -->
+
+                        <tr
+                            data-status="active"
+                            data-voting="voted">
+
+                            <td>
+                                20260001
+                            </td>
+
+                            <td>
+                                John Doe
+                            </td>
+
+                            <td>
+                                Computer Science
+                            </td>
+
+                            <td>
+                                3rd Year
+                            </td>
+
+                            <td>
+
+                                <span class="account-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="voting-status voted">
+                                    Voted
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Student 2 -->
+
+                        <tr
+                            data-status="active"
+                            data-voting="not-voted">
+
+                            <td>
+                                20260002
+                            </td>
+
+                            <td>
+                                Mary Smith
+                            </td>
+
+                            <td>
+                                Mathematics
+                            </td>
+
+                            <td>
+                                3rd Year
+                            </td>
+
+                            <td>
+
+                                <span class="account-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="voting-status not-voted">
+                                    Not Voted
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Student 3 -->
+
+                        <tr
+                            data-status="active"
+                            data-voting="voted">
+
+                            <td>
+                                20260003
+                            </td>
+
+                            <td>
+                                James Brown
+                            </td>
+
+                            <td>
+                                Information Technology
+                            </td>
+
+                            <td>
+                                4th Year
+                            </td>
+
+                            <td>
+
+                                <span class="account-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="voting-status voted">
+                                    Voted
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Student 4 -->
+
+                        <tr
+                            data-status="inactive"
+                            data-voting="not-voted">
+
+                            <td>
+                                20260004
+                            </td>
+
+                            <td>
+                                Sarah Jones
+                            </td>
+
+                            <td>
+                                Business
+                            </td>
+
+                            <td>
+                                2nd Year
+                            </td>
+
+                            <td>
+
+                                <span class="account-status inactive">
+                                    Inactive
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="voting-status not-voted">
+                                    Not Voted
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Student 5 -->
+
+                        <tr
+                            data-status="active"
+                            data-voting="voted">
+
+                            <td>
+                                20260005
+                            </td>
+
+                            <td>
+                                Peter Williams
+                            </td>
+
+                            <td>
+                                Computer Science
+                            </td>
+
+                            <td>
+                                3rd Year
+                            </td>
+
+                            <td>
+
+                                <span class="account-status active">
+                                    Active
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="voting-status voted">
+                                    Voted
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

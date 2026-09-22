@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Election - StudentVote</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--Navigation-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/OIP.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Election-->
+    <main class="election-page">
+        <!--Page Heading-->
+        <section class="page-heading">
+            <span class="status open">OPEN</span>
+            <h1>Student Representative Election</h1>
+            <p>2026 Student Representative Election</p>
+        </section>
+
+        <!--Election Information-->
+        <section class="election-information">
+            <div class="election-description">
+                <h2>About This Election</h2>
+                <p>
+                    This election allows students to choose their representatives for the 2026 academic year.
+                </p>
+                <p>
+                    Please review the candidates carefully before submitting your vote.
+                </p>
+            </div>
+            <div class="election-details">
+                <h2>Election Details</h2>
+                <div class="detail">
+                    <strong>Start Date</strong>
+                    <span>1 September 2026</span>
+                </div>
+                <div class="detail">
+                    <strong>End Date</strong>
+                    <span>30 September 2026</span>
+                </div>
+                <div class="detail">
+                    <strong>Status</strong>
+                    <span class="status open">OPEN</span>
+                </div>
+            </div>
+        </section>
+
+        <!--POSITIONS-->
+        <section class="positions-section">
+            <h2>Available Positions</h2>
+            <p class="section-description">
+                Select a position to view its candidates.
+            </p>
+
+            <div class="positions-grid">
+                <!--President-->
+                <div class="position-card">
+                    <div class="position-number">
+                        01
+                    </div>
+                    <h3>President</h3>
+                    <p>
+                        Represent the student body and provide leadership.
+                    </p>
+                    <p class="candidate-count">
+                        3 Candidates
+                    </p>
+                    <a href="candidates.html" class="btn">View Candidates</a>
+                </div>
+                <!--Vice President-->
+                <div class="position-card">
+                    <div class="position-number">
+                        02
+                    </div>
+                    <h3>Vice President</h3>
+                    <p>
+                        Assist the president and represent students when required.
+                    </p>
+                    <p class="candidate-count">3 Candidates</p>
+                    <a href="candidates.html" class="btn">View Candidates</a>
+                </div>
+                <!--Secretary-->
+                <div class="position-card">
+                    <div class="position-number">03</div>
+                    <h3>Secretary</h3>
+                    <p>
+                        Manage student organization records and communications.
+                    </p>
+                    <p class="candidate-count">3 Candidates</p>
+                    <a href="candidates.html" class="btn">View Candidates</a>
+                </div>
+                <!--Treasurer-->
+                <div class="position-card">
+                    <div class="position-number">04</div>
+                    <h3>Treasurer</h3>
+                    <p>
+                        Assist with financial records and student organization finances.
+                    </p>
+                    <p class="candidate-count">3 Candidates</p>
+                    <a href="candidates.html" class="btn">View Candidates</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Election Results - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ADMIN NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                StudentVote
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="admin-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-election.html">
+                        Elections
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-positions.html">
+                        Positions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-candidates.html">
+                        Candidates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-students.html">
+                        Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-results.html">
+                        Results
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-dashboard">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="admin-welcome">
+
+            <h1>
+                Election Results
+            </h1>
+
+            <p>
+                View voting participation and election results.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ELECTION SELECTOR
+        ========================== -->
+
+        <section class="results-selector">
+
+            <div class="form-group">
+
+                <label for="resultsElection">
+                    Select Election
+                </label>
+
+                <select id="resultsElection">
+
+                    <option value="2026">
+                        Student Representative Election 2026
+                    </option>
+
+                    <option value="2025">
+                        Student Representative Election 2025
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ELECTION STATUS
+        ========================== -->
+
+        <section class="results-status">
+
+            <div>
+
+                <span class="results-status-label">
+                    Election Status
+                </span>
+
+                <strong id="electionStatus">
+                    CLOSED
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span class="results-status-label">
+                    Election Date
+                </span>
+
+                <strong>
+                    August 10 – August 15, 2026
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TURNOUT
+        ========================== -->
+
+        <section class="results-overview">
+
+
+            <div class="result-overview-card">
+
+                <span>
+                    Registered Voters
+                </span>
+
+                <strong>
+                    1,250
+                </strong>
+
+            </div>
+
+
+            <div class="result-overview-card">
+
+                <span>
+                    Votes Cast
+                </span>
+
+                <strong>
+                    842
+                </strong>
+
+            </div>
+
+
+            <div class="result-overview-card">
+
+                <span>
+                    Did Not Vote
+                </span>
+
+                <strong>
+                    408
+                </strong>
+
+            </div>
+
+
+            <div class="result-overview-card">
+
+                <span>
+                    Voter Turnout
+                </span>
+
+                <strong>
+                    67.4%
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             PRESIDENT
+        ========================== -->
+
+        <section class="result-position">
+
+            <div class="result-position-header">
+
+                <div>
+
+                    <h2>
+                        President
+                    </h2>
+
+                    <p>
+                        Total votes: 842
+                    </p>
+
+                </div>
+
+                <span class="winner-label">
+                    Winner: John Doe
+                </span>
+
+            </div>
+
+
+            <!-- Candidate 1 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        JD
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            John Doe
+                        </h3>
+
+                        <p>
+                            Computer Science — 3rd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        420 votes
+                    </strong>
+
+                    <span>
+                        49.9%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 49.9%;">
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 2 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        MS
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mary Smith
+                        </h3>
+
+                        <p>
+                            Mathematics — 3rd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        300 votes
+                    </strong>
+
+                    <span>
+                        35.6%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 35.6%;">
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 3 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        PW
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Peter Williams
+                        </h3>
+
+                        <p>
+                            Computer Science — 3rd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        122 votes
+                    </strong>
+
+                    <span>
+                        14.5%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 14.5%;">
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             VICE PRESIDENT
+        ========================== -->
+
+        <section class="result-position">
+
+            <div class="result-position-header">
+
+                <div>
+
+                    <h2>
+                        Vice President
+                    </h2>
+
+                    <p>
+                        Total votes: 842
+                    </p>
+
+                </div>
+
+                <span class="winner-label">
+                    Winner: James Brown
+                </span>
+
+            </div>
+
+
+            <!-- Candidate 1 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        JB
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            James Brown
+                        </h3>
+
+                        <p>
+                            Information Technology — 4th Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        500 votes
+                    </strong>
+
+                    <span>
+                        59.4%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 59.4%;">
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 2 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        SJ
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Sarah Jones
+                        </h3>
+
+                        <p>
+                            Business — 2nd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        342 votes
+                    </strong>
+
+                    <span>
+                        40.6%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 40.6%;">
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             SECRETARY
+        ========================== -->
+
+        <section class="result-position">
+
+            <div class="result-position-header">
+
+                <div>
+
+                    <h2>
+                        Secretary
+                    </h2>
+
+                    <p>
+                        Total votes: 842
+                    </p>
+
+                </div>
+
+                <span class="winner-label">
+                    Winner: David Wilson
+                </span>
+
+            </div>
+
+
+            <!-- Candidate 1 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        DW
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            David Wilson
+                        </h3>
+
+                        <p>
+                            Computer Science — 4th Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        470 votes
+                    </strong>
+
+                    <span>
+                        55.8%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 55.8%;">
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 2 -->
+
+            <div class="result-candidate">
+
+                <div class="result-candidate-info">
+
+                    <div class="result-avatar">
+                        SC
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Susan Clark
+                        </h3>
+
+                        <p>
+                            Business — 3rd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-vote-info">
+
+                    <strong>
+                        372 votes
+                    </strong>
+
+                    <span>
+                        44.2%
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-bar">
+
+                <div
+                    class="result-bar-fill"
+                    style="width: 44.2%;">
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

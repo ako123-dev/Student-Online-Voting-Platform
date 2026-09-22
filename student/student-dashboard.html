@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - StudentVote</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/OIP.png">
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="student-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="election.html">Elections</a>
+                </li>
+                <li>
+                    <a href="results.html">Results</a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+    <main class="dashboard">
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>
+                Welcome, John!
+            </h1>
+            <p>
+                Welcome to your student voting dashboard.
+            </p>
+        </section>
+
+        <!-- =========================
+             CURRENT ELECTION
+        ========================== -->
+        <section class="dashboard-section">
+            <h2>
+                Current Election
+            </h2>
+            <div class="election-card">
+                <div>
+                    <span class="status open">
+                        OPEN
+                    </span>
+                    <h3>
+                        Student Representative Election
+                    </h3>
+                    <p>
+                        Vote for your student representatives
+                        for the 2026 academic year.
+                    </p>
+                    <p class="election-date">
+                        Voting ends: 30 September 2026
+                    </p>
+                </div>
+                <div>
+                    <a href="election.html"
+                       class="btn">
+                        View Election
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             VOTING STATUS
+        ========================== -->
+        <section class="dashboard-section">
+            <h2>
+                Your Voting Status
+            </h2>
+            <div class="status-card">
+                <div class="status-icon">
+                    ✓
+                </div>
+                <div>
+                    <h3 id="votingStatusTitle">
+                        Not Yet Voted
+                    </h3>
+                    <p id="votingStatusMessage">
+                        You have not submitted your vote
+                        for the current election.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             QUICK INFORMATION
+        ========================== -->
+        <section class="dashboard-section">
+            <h2>
+                Important Information
+            </h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>
+                        One Vote
+                    </h3>
+                    <p>
+                        Make your choice carefully.
+                        Submitted votes cannot be changed.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>
+                        Secure
+                    </h3>
+                    <p>
+                        Your vote will be securely recorded
+                        by the voting system.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h3>
+                        Election Deadline
+                    </h3>
+                    <p>
+                        Make sure you vote before
+                        the election closes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-card">
+
+    <h2>
+        Latest Election Results
+    </h2>
+
+    <p>
+        The Student Representative Election 2026
+        results are now available.
+    </p>
+
+    <a
+        href="results.html"
+        class="btn">
+
+        View Results
+
+    </a>
+
+</section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

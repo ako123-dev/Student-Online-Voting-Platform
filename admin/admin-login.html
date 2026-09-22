@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - StudentVote</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--NAVIGATION-->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                StudentVote
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../student/login.html">Student Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--ADMIN LOGIN-->
+    <main class="admin-login-page">
+        <section class="admin-login-container">
+            
+            <div class="admin-login-heading">
+                <div class="admin-icon">A</div>
+                <h1>Administrator Login</h1>
+                <p>
+                    Sign in to manage the voting platform.
+                </p>
+            </div>
+
+            <form id="adminLoginForm">
+                <!--USERNAME-->
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" name="adminUsername" placeholder="adminUsername">
+                    <small id="adminUsernameError"></small>
+                </div>
+
+                <!--PASSWORD-->
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" name="adminPassword" placeholder="adminPassword">
+                    <small id="adminPasswordError"></small>
+                </div>
+
+                <!--LOGIN BUTTON-->
+                <button type="submit" class="login-btn">Login</button>
+
+                <!--MESSAGE-->
+                <p id="adminLoginMessage"></p>
+            </form>
+
+            <div class="admin-login-footer">
+                <a href="../index.html">Return to Homepage</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

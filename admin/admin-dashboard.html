@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--ADMIN NAVIGATION-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">StudentVote</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-election.html">Elections</a></li>
+                <l><a href="admin-positions.html">Positions</a></l>
+                <li><a href="admin-candidates.html">Candidates</a></li>
+                <li><a href="admin-results.html">Results</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--ADMIN DASHBOARD-->
+    <main class="admin-dashboard">
+        <!--WELCOME-->
+        <section class="admin-welcome">
+            <h1>Admin Dashboard</h1>
+            <p>
+                Welcome, Administrator.
+                Manage your school's voting system here.
+            </p>
+        </section>
+
+        <!--STATISTICS-->
+        <section class="admin-stats">
+            <div class="admin-stat-card">
+                <span class="admin-stat-label">Registered Students</span>
+                <strong class="admin-stat-number">1250</strong>
+            </div>
+
+            <div class="admin-stat-card">
+                <span class="admin-stat-label"> Candidate</span>
+                <strong class="admin-stat-number">18</strong>
+            </div>
+
+            <div class="admin-stat-card">
+                <span class="admin-stat-label">Elections</span>
+                <strong class="admin-stat-number">3</strong>
+            </div>
+
+            <div class="admin-stat-card">
+                <span class="admin-stat-label">Votes Cast</span>
+                <strong class="admin-stat-number">842</strong>
+            </div>
+        </section>
+
+        <!--CURRENT ELECTION-->
+        <section class="admin-section">
+            <div class="section-title">
+                <h2>Current Election</h2>
+                <a href="admin-election.html">View All Elections</a>
+            </div>
+
+            <div class="current-election-card">
+                <div>
+                    <span class="status open">OPEN</span>
+                    <h3>Student Representative Election 2026</h3>
+                    <p>
+                        1 September 2026 - 30 September 2026
+                    </p>
+                </div>
+
+                <a href="admin-election.html" class="btn">Manage Election</a>
+            </div>
+        </section>
+
+        <!--QUICK ACTIONS-->
+
+        <section class="admin-section">
+            <h2>Quick Action</h2>
+            <div class="quick-actions">
+                <a href="admin-election.html" class="quick-action-card">
+                    <span class="quick-action-icon">+</span>
+                    <strong>Create Election</strong>
+                    <small>
+                        Create and configure a new election.
+                    </small>
+                </a>
+
+                <a href="admin-candidates.html" class="quick-action-card">
+                    <span class="quick-action-icon">+</span>
+                    <strong>Add Candidate</strong>
+                    <small>
+                        Register a candidate for an election.
+                    </small>
+                </a>
+
+                <a href="admin-students.html" class="quick-action-card">
+                    <span class="quick-action-icon">S</span>
+                    <strong>Manage Students</strong>
+                    <small>
+                        View and manage registered students.
+                    </small>
+                </a>
+
+                <a href="admin-results.html" class="quick-action-card">
+                    <span class="quick-action-icon">R</span>
+                    <strong>View Results</strong>
+                    <small>
+                        View election results and statistics.
+                    </small>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
