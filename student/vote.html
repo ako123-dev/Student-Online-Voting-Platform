@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Review Vote - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                StudentVote
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="student-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="election.html">
+                        Election
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         VOTE REVIEW
+    ========================== -->
+
+    <main class="vote-page">
+        <section class="vote-container">
+            <div class="vote-heading">
+                <span class="status open">
+                    ELECTION OPEN
+                </span>
+                <h1>
+                    Review Your Vote
+                </h1>
+
+                <p>
+                    Please carefully review your selection
+                    before confirming your vote.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 ELECTION INFORMATION
+            ========================== -->
+
+            <div class="vote-election-info">
+
+                <p>
+                    <strong>Election:</strong>
+                    Student Representative Election 2026
+                </p>
+
+                <p>
+                    <strong>Position:</strong>
+                    President
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 SELECTED CANDIDATE
+            ========================== -->
+
+            <div class="selected-candidate">
+
+                <h2>
+                    Your Selected Candidate
+                </h2>
+
+
+                <div class="selected-candidate-card">
+
+                    <div class="selected-photo">
+
+                        <div class="photo-placeholder"
+                             id="candidateInitials">
+
+                            JD
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="selected-details">
+
+                        <h3 id="selectedCandidate">
+                            John Doe
+                        </h3>
+
+                        <p>
+                            Candidate for President
+                        </p>
+
+                        <p>
+                            Computer Science — 3rd Year
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 WARNING
+            ========================== -->
+
+            <div class="vote-warning">
+
+                <h3>
+                    Important
+                </h3>
+
+                <p>
+                    Once your vote has been submitted,
+                    you will not be able to change it.
+                    Please make sure your selection is correct.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 ACTIONS
+            ========================== -->
+
+            <div class="vote-actions">
+
+                <a href="candidates.html"
+                   class="secondary-btn">
+
+                    ← Change Selection
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="btn"
+                    id="confirmVoteButton">
+
+                    Confirm Vote
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 MESSAGE
+            ========================== -->
+
+            <p id="voteMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

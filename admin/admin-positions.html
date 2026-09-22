@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Positions - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ADMIN NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                StudentVote
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="admin-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-election.html">
+                        Elections
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-positions.html">
+                        Positions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-candidates.html">
+                        Candidates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-results.html">
+                        Results
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-dashboard">
+
+
+        <!-- Page Heading -->
+
+        <section class="admin-welcome">
+
+            <h1>
+                Manage Positions
+            </h1>
+
+            <p>
+                Create and manage positions for each election.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ELECTION SELECTOR
+        ========================== -->
+
+        <section class="position-election-selector">
+
+            <div class="form-group">
+
+                <label for="positionElection">
+                    Select Election
+                </label>
+
+                <select id="positionElection">
+
+                    <option value="election2026">
+                        Student Representative Election 2026
+                    </option>
+
+                    <option value="election2027">
+                        Student Representative Election 2027
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ADD POSITION BUTTON
+        ========================== -->
+
+        <div class="admin-page-action">
+
+            <button
+                type="button"
+                class="btn"
+                id="showPositionForm">
+
+                + Add Position
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             ADD POSITION FORM
+        ========================== -->
+
+        <section
+            class="admin-form-container"
+            id="positionFormContainer"
+            style="display: none;">
+
+            <div class="admin-form-header">
+
+                <h2>
+                    Add Position
+                </h2>
+
+                <button
+                    type="button"
+                    class="close-form"
+                    id="closePositionForm">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <form id="createPositionForm">
+
+
+                <!-- Position Name -->
+
+                <div class="form-group">
+
+                    <label for="positionName">
+                        Position Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="positionName"
+                        placeholder="Example: President"
+                    >
+
+                    <small id="positionNameError">
+                    </small>
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="positionDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="positionDescription"
+                        rows="4"
+                        placeholder="Describe the responsibilities of this position">
+                    </textarea>
+
+                </div>
+
+
+                <!-- Maximum Candidates -->
+
+                <div class="form-group">
+
+                    <label for="maximumCandidates">
+                        Maximum Number of Candidates
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maximumCandidates"
+                        min="1"
+                        placeholder="Example: 5"
+                    >
+
+                    <small id="maximumCandidatesError">
+                    </small>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="admin-form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelPositionForm">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        Add Position
+
+                    </button>
+
+                </div>
+
+
+                <p id="positionFormMessage"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             CURRENT POSITIONS
+        ========================== -->
+
+        <section class="admin-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Positions
+                </h2>
+
+                <span>
+                    Student Representative Election 2026
+                </span>
+
+            </div>
+
+
+            <!-- President -->
+
+            <div class="position-admin-card">
+
+                <div class="position-number">
+                    1
+                </div>
+
+
+                <div class="position-admin-info">
+
+                    <h3>
+                        President
+                    </h3>
+
+                    <p>
+                        The president represents students
+                        and leads the student council.
+                    </p>
+
+                    <span>
+                        3 Candidates
+                    </span>
+
+                </div>
+
+
+                <div class="position-admin-actions">
+
+                    <a
+                        href="admin-candidates.html"
+                        class="secondary-btn">
+
+                        Candidates
+
+                    </a>
+
+                    <button
+                        type="button"
+                        class="secondary-btn">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vice President -->
+
+            <div class="position-admin-card">
+
+                <div class="position-number">
+                    2
+                </div>
+
+
+                <div class="position-admin-info">
+
+                    <h3>
+                        Vice President
+                    </h3>
+
+                    <p>
+                        Supports the president and assists
+                        with student council activities.
+                    </p>
+
+                    <span>
+                        2 Candidates
+                    </span>
+
+                </div>
+
+
+                <div class="position-admin-actions">
+
+                    <a
+                        href="admin-candidates.html"
+                        class="secondary-btn">
+
+                        Candidates
+
+                    </a>
+
+                    <button
+                        type="button"
+                        class="secondary-btn">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Secretary -->
+
+            <div class="position-admin-card">
+
+                <div class="position-number">
+                    3
+                </div>
+
+
+                <div class="position-admin-info">
+
+                    <h3>
+                        Secretary
+                    </h3>
+
+                    <p>
+                        Maintains meeting records and
+                        student council documentation.
+                    </p>
+
+                    <span>
+                        2 Candidates
+                    </span>
+
+                </div>
+
+
+                <div class="position-admin-actions">
+
+                    <a
+                        href="admin-candidates.html"
+                        class="secondary-btn">
+
+                        Candidates
+
+                    </a>
+
+                    <button
+                        type="button"
+                        class="secondary-btn">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Treasurer -->
+
+            <div class="position-admin-card">
+
+                <div class="position-number">
+                    4
+                </div>
+
+
+                <div class="position-admin-info">
+
+                    <h3>
+                        Treasurer
+                    </h3>
+
+                    <p>
+                        Manages student council financial
+                        records and activities.
+                    </p>
+
+                    <span>
+                        1 Candidate
+                    </span>
+
+                </div>
+
+
+                <div class="position-admin-actions">
+
+                    <a
+                        href="admin-candidates.html"
+                        class="secondary-btn">
+
+                        Candidates
+
+                    </a>
+
+                    <button
+                        type="button"
+                        class="secondary-btn">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

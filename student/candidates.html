@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Candidates - StudentVote</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--NAVIGATION-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/OIP.png">
+            </div>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="election.html">Election</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--CANDIDATES PAGE-->
+    <main class="Candidates-page">
+        
+        <!--Page Heading-->
+        <section class="page-heading">
+            <span class="status open">OPEN</span>
+            <h1>Candidates for President</h1>
+            <p>Student Representative Election 2026</p>
+        </section>
+
+        <!--Candidate Information-->
+        <section class="candidate-introduction">
+            <p>
+                Review each candidate's information and manifesto before making your decision.
+            </p>
+            <p>
+                You can select only one candidate for this position.
+            </p>
+        </section>
+
+        <!--Candidates-->
+        <section class="candidates-grid">
+            <!--Candidate 1-->
+            <article class="candidate-card">
+                <div class="candidate-photo">
+                    <div class="photo-placeholder">
+                        JD
+                    </div>
+                </div>
+                <div class="candidate-content">
+                    <h2>John Doe</h2>
+                    <p class="candidate-position">
+                        Candidate for President
+                    </p>
+                    <p>
+                        <strong>Course:</strong>
+                        Computer Science
+                    </p>
+                    <p>
+                        <strong>Year:</strong>
+                        3rd Year
+                    </p>
+                    <div class="manifesto">
+                        <h3>Manifesto</h3>
+                        <p>
+                            My goal is to improve student communication, academic support, and student activities across the university.
+                        </p>
+                    </div>
+                    <button
+                        class="btn vote-button"
+                        onclick="selectCandidate('John Doe')">
+                        Vote for John
+                    </button>
+                </div>
+            </article>
+
+            <!--Candidate 2-->
+            <article class="candidate-card">
+                <div class="candidate-photo">
+                    <div class="photo-placeholder">MS</div>
+                </div>
+                <div class="candidate-content">
+                    <h2>Mary Smith</h2>
+                    <p class="candidate-position">
+                        Candidate for President
+                    </p>
+                    <p>
+                        <strong>Course:</strong>
+                        Business
+                    </p>
+                    <p>
+                        <strong>Year:</strong>
+                        3rd Year
+                    </p>
+                    <div class="manifesto">
+                        <h3>Manifesto</h3>
+                        <p>
+                            I want to create better opportunities for students, improve student services, and encourage student participation.
+                        </p>
+                    </div>
+                    <button class="btn vote-button" onclick="selectCandidate('Mary Smith')">
+                        Vote for Mary
+                    </button>
+                </div>
+            </article>
+
+            <!--Candidate 3-->
+            <article class="candidate-card">
+                <div class="candidate-photo">
+                    <div class="photo-placeholder">PW</div>
+                </div>
+                <div class="candidate-content">
+                    <h2>Peter Williams</h2>
+                    <p class="candidate-position">
+                        Candidate for President
+                    </p>
+                    <p>
+                        <strong>Course:</strong>
+                        Engineering
+                    </p>
+                    <p>
+                        <strong>Year:</strong>
+                        4th Year
+                    </p>
+                    <div class="manifesto">
+                        <h3>Manifesto</h3>
+                        <p>
+                            My focus will be on improving student facilities, communication, and collaboration between students and university administration.
+                        </p>
+                    </div>
+                    <button class="btn vote-button" onclick="selectCandidate('Peter Williams')">
+                        vote for Peter
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <!--Back Button-->
+        <div class="back-button">
+            <a href="election.html">Back to Election</a>
+        </div>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

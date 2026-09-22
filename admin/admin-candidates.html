@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Candidates - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         ADMIN NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                StudentVote
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="admin-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-election.html">
+                        Elections
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-candidates.html">
+                        Candidates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-results.html">
+                        Results
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="admin-dashboard">
+
+
+        <!-- Page Heading -->
+
+        <section class="admin-welcome">
+
+            <h1>
+                Manage Candidates
+            </h1>
+
+            <p>
+                Add and manage candidates participating
+                in school elections.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION
+        ========================== -->
+
+        <div class="admin-page-action">
+
+            <button
+                type="button"
+                class="btn"
+                id="showCandidateForm">
+
+                + Add Candidate
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             ADD CANDIDATE FORM
+        ========================== -->
+
+        <section
+            class="admin-form-container"
+            id="candidateFormContainer"
+            style="display: none;">
+
+            <div class="admin-form-header">
+
+                <h2>
+                    Add Candidate
+                </h2>
+
+                <button
+                    type="button"
+                    class="close-form"
+                    id="closeCandidateForm">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <form id="createCandidateForm">
+
+
+                <!-- First Name -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="candidateFirstName">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="candidateFirstName"
+                            placeholder="Enter first name"
+                        >
+
+                        <small id="candidateFirstNameError">
+                        </small>
+
+                    </div>
+
+
+                    <!-- Last Name -->
+
+                    <div class="form-group">
+
+                        <label for="candidateLastName">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="candidateLastName"
+                            placeholder="Enter last name"
+                        >
+
+                        <small id="candidateLastNameError">
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Student ID -->
+
+                <div class="form-group">
+
+                    <label for="candidateStudentId">
+                        Student ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="candidateStudentId"
+                        placeholder="Enter student ID"
+                    >
+
+                    <small id="candidateStudentIdError">
+                    </small>
+
+                </div>
+
+
+                <!-- Election -->
+
+                <div class="form-group">
+
+                    <label for="candidateElection">
+                        Election
+                    </label>
+
+                    <select id="candidateElection">
+
+                        <option value="">
+                            Select Election
+                        </option>
+
+                        <option value="election2026">
+                            Student Representative Election 2026
+                        </option>
+
+                        <option value="election2027">
+                            Student Representative Election 2027
+                        </option>
+
+                    </select>
+
+                    <small id="candidateElectionError">
+                    </small>
+
+                </div>
+
+
+                <!-- Position -->
+
+                <div class="form-group">
+
+                    <label for="candidatePosition">
+                        Position
+                    </label>
+
+                    <select id="candidatePosition">
+
+                        <option value="">
+                            Select Position
+                        </option>
+
+                        <option value="president">
+                            President
+                        </option>
+
+                        <option value="vice-president">
+                            Vice President
+                        </option>
+
+                        <option value="secretary">
+                            Secretary
+                        </option>
+
+                        <option value="treasurer">
+                            Treasurer
+                        </option>
+
+                    </select>
+
+                    <small id="candidatePositionError">
+                    </small>
+
+                </div>
+
+
+                <!-- Programme -->
+
+                <div class="form-group">
+
+                    <label for="candidateProgramme">
+                        Programme / Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="candidateProgramme"
+                        placeholder="Example: Computer Science"
+                    >
+
+                </div>
+
+
+                <!-- Year -->
+
+                <div class="form-group">
+
+                    <label for="candidateYear">
+                        Year of Study
+                    </label>
+
+                    <select id="candidateYear">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="1">
+                            1st Year
+                        </option>
+
+                        <option value="2">
+                            2nd Year
+                        </option>
+
+                        <option value="3">
+                            3rd Year
+                        </option>
+
+                        <option value="4">
+                            4th Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Manifesto -->
+
+                <div class="form-group">
+
+                    <label for="candidateManifesto">
+                        Manifesto
+                    </label>
+
+                    <textarea
+                        id="candidateManifesto"
+                        rows="5"
+                        placeholder="Enter the candidate's manifesto">
+                    </textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="admin-form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelCandidateForm">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        Add Candidate
+
+                    </button>
+
+                </div>
+
+
+                <p id="candidateFormMessage"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             CANDIDATE LIST
+        ========================== -->
+
+        <section class="admin-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Current Candidates
+                </h2>
+
+                <span>
+                    4 Candidates
+                </span>
+
+            </div>
+
+
+            <!-- Candidate 1 -->
+
+            <div class="admin-candidate-card">
+
+                <div class="candidate-admin-avatar">
+                    JD
+                </div>
+
+
+                <div class="candidate-admin-info">
+
+                    <h3>
+                        John Doe
+                    </h3>
+
+                    <p>
+                        Student ID: 20260001
+                    </p>
+
+                    <p>
+                        Computer Science — 3rd Year
+                    </p>
+
+                    <span>
+                        President
+                    </span>
+
+                </div>
+
+
+                <div class="candidate-admin-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn edit-candidate">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 2 -->
+
+            <div class="admin-candidate-card">
+
+                <div class="candidate-admin-avatar">
+                    MS
+                </div>
+
+
+                <div class="candidate-admin-info">
+
+                    <h3>
+                        Mary Smith
+                    </h3>
+
+                    <p>
+                        Student ID: 20260002
+                    </p>
+
+                    <p>
+                        Mathematics — 3rd Year
+                    </p>
+
+                    <span>
+                        President
+                    </span>
+
+                </div>
+
+
+                <div class="candidate-admin-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn edit-candidate">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 3 -->
+
+            <div class="admin-candidate-card">
+
+                <div class="candidate-admin-avatar">
+                    JB
+                </div>
+
+
+                <div class="candidate-admin-info">
+
+                    <h3>
+                        James Brown
+                    </h3>
+
+                    <p>
+                        Student ID: 20260003
+                    </p>
+
+                    <p>
+                        Information Technology — 4th Year
+                    </p>
+
+                    <span>
+                        Vice President
+                    </span>
+
+                </div>
+
+
+                <div class="candidate-admin-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn edit-candidate">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Candidate 4 -->
+
+            <div class="admin-candidate-card">
+
+                <div class="candidate-admin-avatar">
+                    SJ
+                </div>
+
+
+                <div class="candidate-admin-info">
+
+                    <h3>
+                        Sarah Jones
+                    </h3>
+
+                    <p>
+                        Student ID: 20260004
+                    </p>
+
+                    <p>
+                        Business — 2nd Year
+                    </p>
+
+                    <span>
+                        Secretary
+                    </span>
+
+                </div>
+
+
+                <div class="candidate-admin-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn edit-candidate">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="danger-btn">
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

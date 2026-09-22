@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Elections - StudentVote</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--ADMIN NAVIGATION-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                StudentVote
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li>
+                    <a href="admin-election.html">Elections</a>
+                </li>
+                <li>
+                    <a href="admin-candidates.html">Candidates</a>
+                </li>
+                <li>
+                    <a href="admin-results">Results</a>
+                </li>
+                <li>
+                    <a href="../index.html"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--MAIN CONTENT-->
+    <main class="admin-dashboard">
+
+        <!--Page Heading-->
+        <section class="admin-welcome">
+            <h1>Manage Elections</h1>
+            <p>
+                Create and manage school elections.
+            </p>
+        </section>
+
+        <!--Create Button-->
+        <div class="admin-page-action">
+            <button type="button" class="btn" id="showElectionForm">
+                + Create New Election
+            </button>
+        </div>
+
+        <!--Create Election Form-->
+        <section class="admin-form-container" id="electionFormContainer" style="display: none;">
+            <div class="admin-form-header">
+                <h2>Create New Election</h2>
+                <button type="button" class="close-form" id="closeElectionForm">
+                    x
+                </button>
+            </div>
+
+            <form id="createElectionForm">
+                <!--Election Name-->
+                <div class="form-group">
+                    <label for="electionName">Election Name</label>
+                    <input
+                        type="text" id="electionName"
+                        name="electionName"
+                        placeholder="Example: Student Representative Election"
+                    >
+                    <small id="electionNameError"></small>
+                </div>
+
+                <!--Description-->
+                <div class="form-group">
+                    <label for="electionDescription">
+                        Description
+                    </label>
+                    <textarea id="electionDescription"
+                        name="electionDescription"
+                        rows="4"
+                        placeholder="Enter a description for this election"
+                    ></textarea>
+                </div>
+
+                <!--Start End Date-->
+                <div class="form-row">
+
+                    <!--Start Date-->
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input
+                            type="date"
+                            id="startDate"
+                            name="startDate"
+                        >
+                        <small id="startDateError"></small>
+                    </div>
+
+                    <!--End Date-->
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input
+                            type="date"
+                            id="endDate"
+                            name="endDate"
+                        >
+                        <small id="endDateError"></small>
+                    </div>
+                </div>
+
+                <!--Status-->
+                <div class="form-group">
+                    <label for="electionStatus">Election Status</label>
+                    <select id="electionStatus" name="electionStatus">
+                        <option value="draft">Draft</option>
+                        <option value="open">Open</option>
+                        <option value="closed">Closed</option>
+                    </select>
+                </div>
+
+                <!--Button-->
+                <div class="admin-form-actions">
+                    <button type="button" class="secondary-btn" id="cancelElectionForm">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="btn" id="electionSubmitButton">
+                        Create Election
+                    </button>
+
+                    <button type="button" class="secondary-btn" id="cancelEditButton" style="display: none;">
+                        Cancel Edit
+                    </button>
+                </div>
+
+                <p id="electionFormMessage"></p>
+            </form>
+        </section>
+
+        <!--Election List-->
+        <section class="admin-section">
+            <div class="section-title">
+                <h2>All Elections</h2>
+                <span>3 Elections</span>
+            </div>
+
+            <!--Election Card 1-->
+            <div class="admin-election-card">
+                <div class="election-card-info">
+                    <span class="status open">
+                        OPEN
+                    </span>
+                    <h3>
+                        Student Representative Election 2026
+                    </h3>
+                    <p>
+                        1 September 2026 -
+                        30 September 2026
+                    </p>
+                    <p>
+                        Students can vote for their student Representatives.
+                    </p>
+                </div>
+
+                <div class="election-card-actions">
+                    <button type="button" class="secondary-btn">
+                        Edit
+                    </button>
+
+                    <button type="button" class="danger-btn">
+                        Close Election
+                    </button>
+
+                    <a href="admin-candidates.html">Candidates</a>
+                </div>
+            </div>
+
+            <!--Election Card 2-->
+            <div class="admin-election-card">
+                <div class="election-card-info">
+                    <span class="status closed">
+                        CLOSED
+                    </span>
+                    <h3>
+                        Student RepresentativeElection 2025
+                    </h3>
+                    <p>
+                        1 September 2025 - 
+                        30 September 2025
+                    </p>
+
+                    <p>
+                        Previous student Representativeelection.
+                    </p>
+                </div>
+
+                <div class="election-card-actions">
+                    <button type="button" class="secondary-btn">View</button>
+                    <a href="admin-results.html" class="btn">Results</a>
+                </div>
+            </div>
+
+            <!--Election Card 3-->
+            <div class="admin-election-card">
+                <div class="election-card-info">
+                    <span class="status draft">DRAFT</span>
+                    <h3>
+                        Student Representative Election 2027
+                    </h3>
+                    <p>
+                        Date not yet published
+                    </p>
+
+                    <p>
+                        Election currently being prepared.
+                    </p>
+                </div>
+
+                <div class="election-card-actions">
+                    <button type="button" class="secondary-btn">
+                        Edit
+                    </button>
+
+                    <button type="button" class="danger-btn">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="admin-section">
+
+    <div class="section-title">
+
+        <div>
+            <h2>Existing Elections</h2>
+
+            <p>
+                Manage elections created on the platform.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="election-table-container">
+
+        <table class="election-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Election Name
+                    </th>
+
+                    <th>
+                        Start Date
+                    </th>
+
+                    <th>
+                        End Date
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Actions
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="electionTableBody">
+
+                <!-- Existing election -->
+
+                <tr>
+
+                    <td>
+                        Student Representative Election 2026
+                    </td>
+
+                    <td>
+                        2026-08-10
+                    </td>
+
+                    <td>
+                        2026-08-15
+                    </td>
+
+                    <td>
+
+                        <span class="status-badge open">
+                            Open
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                            type="button"
+                            class="secondary-btn edit-election">
+
+                            Edit
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="danger-btn close-election">
+
+                            Close
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <p>
+            &copy; 2026 Student Online Voting Platform
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
